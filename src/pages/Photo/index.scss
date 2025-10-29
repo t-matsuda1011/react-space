@@ -1,0 +1,14 @@
+.photo-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+}
+
+.photo-title {
+    font-family: 'Arial Narrow', sans-serif;
+    letter-spacing: -0.01em;
+    color: #333;
+    font-weight: 100;
+}
