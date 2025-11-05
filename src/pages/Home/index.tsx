@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import FruitItem from '../../components/FruitItem';
 import './index.scss'
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -47,6 +48,10 @@ function Home() {
   return (
     <div>
       <h1>Hello World</h1>
+        <ul className='link-list'>
+          <li><Link to="/photo">写真ページへ</Link></li>
+          <li><Link to="/gsap">GSAPページへ</Link></li>
+        </ul>
       <div>
         <h2>Fruits List</h2>
         <ul className='fruit-list'>

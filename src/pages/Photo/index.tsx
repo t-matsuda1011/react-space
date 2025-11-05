@@ -1,4 +1,5 @@
 import PieceCard from '../../components/pieceCard';
+import Test from '../../components/Test';
 import './index.scss';
 
 function Photo() {
@@ -17,6 +18,7 @@ function Photo() {
                     <PieceCard key={photo.id} props={{ image: photo.url }} />
                 ))}
             </ul>
+            <Test />
         </div>
     );
 }
