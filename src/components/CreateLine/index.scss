@@ -2,18 +2,36 @@
     position: relative;
 }
 
-.line-created {
+.line-wrapepr {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: absolute; // 背景上に重ねたい場合
+    outline: none; // フォーカス時のアウトラインを削除
+}
+
+.line-created {
+    width: 100vw; // ビューポート全体の幅
+    height: 100vh; // ビューポート全体の高さ
+    position: fixed; // 画面全体に固定
     top: 0;
     left: 0;
     pointer-events: none; // ユーザー操作をブロックしない
+    z-index: 1; // 背景に表示
 
     path {
-        // stroke-width: 200; // 線の太さ
-        fill: none; // 塗りつぶしを無効化
+        fill: none !important; // 塗りつぶしを無効化（重要）
         stroke-linecap: round; // 丸みのある線端（モダンな印象）
         stroke-linejoin: round; // 曲がり角を滑らかに
+    }
+
+    text {
+        fill: white;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        text-anchor: middle;
+        user-select: none; // テキスト選択を無効化
+        letter-spacing: -0.01em;
+        transform: scale(1, 1.1);
     }
 }

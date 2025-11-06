@@ -1,5 +1,4 @@
 import AnimateBox from '../../components/AnimateBox';
-import { CreateLine } from '../../components/CreateLine';
 import './index.scss';
 
 function Gsap() {
@@ -37,7 +36,6 @@ function Gsap() {
                     fontSize='0.8rem'
                 />   
             </div>
-            <CreateLine />
         </div>
     );
 }

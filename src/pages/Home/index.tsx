@@ -51,6 +51,7 @@ function Home() {
         <ul className='link-list'>
           <li><Link to="/photo">写真ページへ</Link></li>
           <li><Link to="/gsap">GSAPページへ</Link></li>
+          <li><Link to="/lines">ラインページへ</Link></li>
         </ul>
       <div>
         <h2>Fruits List</h2>
