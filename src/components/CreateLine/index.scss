@@ -1,0 +1,19 @@
+.line-wrapper {
+    position: relative;
+}
+
+.line-created {
+    width: 100%;
+    height: 100%;
+    position: absolute; // 背景上に重ねたい場合
+    top: 0;
+    left: 0;
+    pointer-events: none; // ユーザー操作をブロックしない
+
+    path {
+        // stroke-width: 200; // 線の太さ
+        fill: none; // 塗りつぶしを無効化
+        stroke-linecap: round; // 丸みのある線端（モダンな印象）
+        stroke-linejoin: round; // 曲がり角を滑らかに
+    }
+}
