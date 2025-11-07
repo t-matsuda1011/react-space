@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import FruitItem from '../../components/FruitItem';
 import './index.scss'
-import { Link } from 'react-router-dom';
+import SectionScroll from '../../components/SectionScroll';
 
 function Home() {
 
@@ -48,11 +48,6 @@ function Home() {
   return (
     <div>
       <h1>Hello World</h1>
-        <ul className='link-list'>
-          <li><Link to="/photo">写真ページへ</Link></li>
-          <li><Link to="/gsap">GSAPページへ</Link></li>
-          <li><Link to="/lines">ラインページへ</Link></li>
-        </ul>
       <div>
         <h2>Fruits List</h2>
         <ul className='fruit-list'>
@@ -65,6 +60,16 @@ function Home() {
         <input type="text" value={newFruitName} onChange={(e) => setNewFruitName(e.target.value)} placeholder="新しいフルーツを追加" />
         <button onClick={addFruits}>追加</button>
       </div>
+      <SectionScroll>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+        <p>スクロールします</p>
+      </SectionScroll>
     </div>
   )
 }

@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    background-color: #333;
+    color: #FFF;
+    &__inner {
+        margin: 0 auto;
+        padding: 16px 32px;
+        max-width: 1280px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
