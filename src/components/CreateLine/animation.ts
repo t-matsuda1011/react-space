@@ -98,7 +98,7 @@ export const setupLineAnimation = (scope: RefObject<HTMLElement | null>): Animat
 
       // テキストは線の開始と同時に表示
       gsap.to(colorText, {
-        display: 'block',
+        // display: 'block',
         duration: 1,
         ease: 'none',
       });      

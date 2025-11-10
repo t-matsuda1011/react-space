@@ -35,3 +35,23 @@
         transform: scale(1, 1.1);
     }
 }
+
+.title-set {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; // SVGの上に表示
+
+    .title-head {
+        width: 95vw;
+        color: #000;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 1.2;
+        user-select: none; // テキスト選択を無効化
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -31,12 +31,21 @@ export const CreateLine = () => {
   }, [handleKeyPress]);
 
   return (
+    <div className="container">
     <div 
       ref={containerRef} 
       className="line-wrapepr"
       tabIndex={0}
     >
       <svg id="line-svg" className="line-created" />
+    </div>
+      <div className="title-set">
+        <div className="title-head">
+          <p>Random</p>
+          <p>Line</p>
+          <p>Animation</p>
+        </div>
+      </div>
     </div>
   );
 };
