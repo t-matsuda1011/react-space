@@ -13,6 +13,7 @@ type AnimatedItemProps = {
         y?: number;       // Y軸の移動量
         opacity?: number; // 透明度の変化量
         rotate?: number;  // 回転角度
+        duration?: number; // アニメーションの持続時間
     }
 }
 
@@ -34,6 +35,7 @@ const AnimatedItem = ({
             y: 50,
             opacity: 0,
             rotate: 0,
+            duration: 0.5,
             ...animationOptions
         };
 
