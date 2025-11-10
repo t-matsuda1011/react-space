@@ -1,0 +1,23 @@
+.my-image-layout {
+    position: absolute;
+    top: 50vh; // 画面の上下中央あたり
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.my-text-layout {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 13%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-rl;
+    &.text-2 {
+        left: 30%;
+    }
+}

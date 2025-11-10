@@ -1,52 +1,82 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // GSAPプラグインを登録
 gsap.registerPlugin(ScrollTrigger);
 
-// アニメーションを初期化する関数
-export const initSectionScrollAnimation = (): (() => void) => {
-    // ScrollTriggerインスタンスを保存する配列
-    const scrollTriggers: ScrollTrigger[] = [];
+// カスタムフックのオプション型
+interface SectionScrollOptions {
+    x?: number;
+    y?: number;
+    opacity?: number;
+    duration?: number;
+    ease?: string;
+    start?: string;
+    end?: string;
+    toggleActions?: string;
+    markers?: boolean;
+}
 
-    // 各.section-scroll要素にアニメーションを適用
-    gsap.utils.toArray<HTMLElement>(".section-scroll").forEach((el) => {
-        const animation = gsap.from(el, {
+/**
+ * スクロールアニメーションのカスタムフック
+ * @param options アニメーションのオプション設定
+ * @returns 要素につけるためのref
+ */
+export const useSectionScrollAnimation = (options: SectionScrollOptions = {}) => {
+    const elementRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const element = elementRef.current;
+        if (!element) return;
+
+        // デフォルト設定
+        const defaultOptions: Required<SectionScrollOptions> = {
             x: 128,
+            y: 0,
             opacity: 0,
             duration: 1.5,
             ease: "power4.out",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+            markers: false,
+        };
+
+        // オプションをマージ
+        const config = { ...defaultOptions, ...options };
+
+        // 初期状態を即座に設定（CSSではなくGSAPで）
+        gsap.set(element, {
+            x: config.x,
+            y: config.y,
+            opacity: config.opacity,
+        });
+
+        // アニメーションを作成（toメソッドを使用して最終状態へ）
+        const animation = gsap.to(element, {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            duration: config.duration,
+            ease: config.ease,
             scrollTrigger: {
-                trigger: el,
-                start: "top 80%", // 要素が画面の80%の位置に来たときにアニメーション開始
-                end: "bottom 20%",
-                toggleActions: "play none none reverse", // スクロール時の動作
-                // markers: true, // デバッグ用（本番では削除）
+                trigger: element,
+                start: config.start,
+                end: config.end,
+                toggleActions: config.toggleActions,
+                markers: config.markers,
             }
         });
 
-        // ScrollTriggerインスタンスを保存
-        if (animation.scrollTrigger) {
-            scrollTriggers.push(animation.scrollTrigger);
-        }
-    });
+        // クリーンアップ関数
+        return () => {
+            if (animation.scrollTrigger) {
+                animation.scrollTrigger.kill();
+            }
+            animation.kill();
+        };
+    }, [options]);
 
-    // クリーンアップ関数を返す
-    return () => {
-        scrollTriggers.forEach(trigger => trigger.kill());
-        ScrollTrigger.refresh();
-    };
+    return elementRef;
 };
-
-// レガシーサポート用（既存のコードとの互換性）
-// このファイルがimportされた時に自動実行される
-// DOM読み込み完了後にアニメーションを初期化
-if (typeof window !== 'undefined') {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            initSectionScrollAnimation();
-        });
-    } else {
-        initSectionScrollAnimation();
-    }
-}

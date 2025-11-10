@@ -1,7 +1,6 @@
 import React from 'react';
 import './index.scss';
-import './animation'; // レガシーサポート用
-import { useSectionScrollAnimation } from './useSectionScrollAnimation';
+import { useSectionScrollAnimation } from './animation';
 
 type SectionScrollProps = {
     children?: React.ReactNode;

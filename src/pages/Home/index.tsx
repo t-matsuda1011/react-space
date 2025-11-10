@@ -60,16 +60,30 @@ function Home() {
         <input type="text" value={newFruitName} onChange={(e) => setNewFruitName(e.target.value)} placeholder="新しいフルーツを追加" />
         <button onClick={addFruits}>追加</button>
       </div>
-      <SectionScroll>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-        <p>スクロールします</p>
-      </SectionScroll>
+      <div style={{ height: '100vh', padding: '20px' }}>
+        <SectionScroll>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+          <p>スクロールします</p>
+        </SectionScroll>
+      </div>
+      <div style={{ height: '100vh', padding: '20px' }}>
+        <SectionScroll animationOptions={{ x: -128, y: 0, opacity: 0, markers: true }}>
+          <h2>左から登場するセクション</h2>
+          <p>このセクションは左からアニメーションします</p>
+        </SectionScroll>
+      </div>
+      <div style={{ height: '100vh', padding: '20px' }}>
+        <SectionScroll animationOptions={{ x: 0, y: 64, opacity: 0, markers: true }}>
+          <h2>下から登場するセクション</h2>
+          <p>このセクションは下からアニメーションします</p>
+        </SectionScroll>
+      </div>
     </div>
   )
 }

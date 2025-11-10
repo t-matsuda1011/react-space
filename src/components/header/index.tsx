@@ -9,9 +9,10 @@ const Header = () => {
                     <Link to="/">My App</Link>
                 </div>
                 <ul className="header__link">
-                    <li><Link to="/photo">写真ページへ</Link></li>
-                    <li><Link to="/gsap">GSAPページへ</Link></li>
-                    <li><Link to="/lines">ラインページへ</Link></li>
+                    <li><Link to="/photo">Photo</Link></li>
+                    <li><Link to="/gsap">GSAP</Link></li>
+                    <li><Link to="/lines">Lines</Link></li>
+                    <li><Link to="/scroll">Scroll</Link></li>
                 </ul>
             </div>
         </header>
