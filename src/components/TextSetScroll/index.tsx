@@ -26,7 +26,7 @@ const TextSetScroll = ({ children }: TextSetScrollProps) => {
                 trigger: element,
                 pin: true,
                 start: "top top",
-                end: "+=3000",
+                end: "+=15000",
                 scrub: 1,
             }
         });

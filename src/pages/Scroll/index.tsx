@@ -8,31 +8,31 @@ function Scroll() {
             <TextSetScroll>
                 <AnimatedItem 
                     className="my-image-layout"
-                    animationOptions={{ startAt: 0, endAt: 30, duration: 30 }}
+                    animationOptions={{ startAt: 0, endAt: 30, duration: 3 }}
                 >
                     hello world
                 </AnimatedItem>
                 <AnimatedItem 
                     className="my-text-layout text-1"
-                    animationOptions={{ startAt: 2, endAt: 8, duration: 6 }}
+                    animationOptions={{ startAt: 2, endAt: 8, duration: 1 }}
                 >
                     これは
                 </AnimatedItem>
                 <AnimatedItem 
                     className="my-text-layout text-2"
-                    animationOptions={{ startAt: 8, endAt: 14, duration: 6 }}
+                    animationOptions={{ startAt: 8, endAt: 14, duration: 1 }}
                 >
                     GSAPを使った
                 </AnimatedItem>
                 <AnimatedItem 
                     className="my-text-layout text-1"
-                    animationOptions={{ startAt: 14, endAt: 20, duration: 6 }}
+                    animationOptions={{ startAt: 14, endAt: 20, duration: 1 }}
                 >
                     スクロール<br/>アニメーションです
                 </AnimatedItem>
                 <AnimatedItem 
                     className="my-text-layout text-2"
-                    animationOptions={{ startAt: 20, endAt: 26, duration: 6 }}
+                    animationOptions={{ startAt: 20, endAt: 26, duration: 1 }}
                 >
                     楽しんでください！
                 </AnimatedItem>

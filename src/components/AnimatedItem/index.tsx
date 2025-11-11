@@ -4,7 +4,7 @@ import './index.scss';
 import gsap from "gsap";
 
 type AnimatedItemProps = {
-    children?: React.ReactNode;
+    children: React.ReactNode;
     className?: string;
     animationOptions?: {
         startAt?: number; // アニメーション開始位置

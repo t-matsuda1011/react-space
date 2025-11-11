@@ -4,6 +4,7 @@ import Photo from "../pages/Photo/index";
 import Gsap from "../pages/Gsap/index";
 import Lines from "../pages/Lines/index";
 import Scroll from "../pages/Scroll/index";
+import Sticker from "../pages/Sticker/index";
 import Layout from "../Layout";
 
 const AppRouter = () => (
@@ -15,6 +16,7 @@ const AppRouter = () => (
         <Route path="gsap" element={<Gsap />} />
         <Route path="lines" element={<Lines />} />
         <Route path="scroll" element={<Scroll />} />
+        <Route path="sticker" element={<Sticker />} />
       </Route>
     </Routes>
   </BrowserRouter>
