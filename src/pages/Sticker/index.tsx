@@ -5,16 +5,15 @@ import DraggableItem from '../../components/DraggableItem';
 function Sticker() {
     return (
         <div className="sticker-page">
-            <h1>Sticker Page</h1>
             <DropZone>
                 <DraggableItem>
-                    <p>Drag me!</p>
+                    <img src="/images/bou.png" alt="" />
                 </DraggableItem>
                 <DraggableItem>
-                    <p>Drag me!</p>
+                    <img src="/images/orange.png" alt="" />
                 </DraggableItem>
                 <DraggableItem>
-                    <p>Drag me!</p>
+                    <img src="/images/sticker_01.png" alt="" />
                 </DraggableItem>
                 <DraggableItem>
                     <p>Drag me!</p>

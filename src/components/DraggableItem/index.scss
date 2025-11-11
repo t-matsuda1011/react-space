@@ -1,14 +1,13 @@
 .draggable-item {
     display: inline-block; // 中身のサイズに合わせる
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
     cursor: grab; // 「掴める」カーソル
     user-select: none; // テキストが選択されないようにする
-
+    filter: drop-shadow(0 10px 6px rgba(0,0,0,0.08));
     &:active {
         cursor: grabbing; // 「掴んでいる」カーソル
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+    }
+    img {
+        width: 200px;
     }
 }
