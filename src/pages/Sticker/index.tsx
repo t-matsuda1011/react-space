@@ -7,7 +7,7 @@ function Sticker() {
         <div className="sticker-page">
             <DropZone>
                 <DraggableItem>
-                    <img src="/images/bou.png" alt="" />
+                    <img src="/images/blue_fukumimi.png" alt="" />
                 </DraggableItem>
                 <DraggableItem>
                     <img src="/images/orange.png" alt="" />
