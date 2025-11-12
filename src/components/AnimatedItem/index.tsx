@@ -1,4 +1,4 @@
-import React, {Children, useContext, useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import { TimeLineContext } from "../TextSetScroll/TimeLineContext";
 import './index.scss';
 import gsap from "gsap";

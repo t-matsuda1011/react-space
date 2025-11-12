@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useContext, Children } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { DragContext } from "../DropZone/DragContext";
 import './index.scss';
 
 gsap.registerPlugin(Draggable);
+
+let globalZIndexCounter = 10;
 
 type DraggableItemProps = {
     children: React.ReactNode;
@@ -25,6 +27,10 @@ const DraggableItem = ({ children }: DraggableItemProps) => {
         Draggable.create(dragItemRef.current, {
             type: "x,y",
             bounds: "body",
+            onDragStart: function () {
+                globalZIndexCounter ++;
+                gsap.set(this.target, { zIndex: globalZIndexCounter });
+            },
             onDragEnd: function () {
                 if (dropZoneRef.current && this.hitTest(dropZoneRef.current, "50%")) {
                     onDrop(dragItemRef.current!);
