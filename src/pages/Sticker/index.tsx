@@ -34,6 +34,7 @@ function Sticker() {
                     <div>
                         <h3>{selectedItem.name}</h3>
                         <p>{selectedItem.description}</p>
+                        {selectedItem.imagePathThum && (<img src={selectedItem.imagePathThum} alt={selectedItem.name} />) }
                     </div>
                 ) : (
                     <p></p>
