@@ -1,5 +1,5 @@
 export type StickerDataType = {
-    id: string | number;
+    id: string;
     name: string;
     imagePath: string;
     description?: string;
@@ -7,7 +7,7 @@ export type StickerDataType = {
 
 export const stickerData: StickerDataType[] = [
     {
-        id: "sticker-01",
+        id: "sticker01",
         name: "みかん",
         imagePath: "/images/orange.png",
         description: "ミカンジュースの自販機の入れ替えに遭遇。"

@@ -1,6 +1,29 @@
-.drop-zone {
-    min-height: 100vh;
-    min-width: 100vw;
-    padding: 20px;
-    transition: background-color 0.3s ease;
+.drop-zone-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .target-box {
+        width: 150px;
+        height: 150px;
+        padding: 24px;
+        border: 4px dashed #ccc;
+        background: #fff;
+        border-radius: 24px;
+        
+        &.occupied {
+            border-color: rgb(20, 218, 76); // 埋まっているときは赤枠など
+            background: #edfff1;
+        }
+    }
+    .item-list {
+        flex: 1;
+    }
+    .target-wrapper {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

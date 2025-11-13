@@ -4,6 +4,7 @@
     user-select: none;
     filter: drop-shadow(0 10px 6px rgba(0,0,0,0.08));
     position: relative;
+    user-select: none;
     &:active {
         cursor: grabbing;
         filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));

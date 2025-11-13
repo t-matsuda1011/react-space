@@ -1,0 +1,16 @@
+.sticker-page {
+    display: flex;
+    gap: 20px;
+    .drop-zone {
+        flex: 1;
+    }
+    .detail-zone {
+        flex: 1;
+        padding: 20px;
+        border-radius: 24px;
+        border: 4px dashed #ddd;
+        h3 {
+            font-size: 3rem;
+        }
+    }
+}
