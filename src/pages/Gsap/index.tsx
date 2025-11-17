@@ -1,4 +1,5 @@
 import AnimateBox from '../../components/AnimateBox';
+import CanvasGsapBall from '../../components/CanvasGsapBall';
 import './index.scss';
 
 function Gsap() {
@@ -35,6 +36,9 @@ function Gsap() {
                     height={50}
                     fontSize='0.8rem'
                 />   
+            </div>
+            <div>
+                <CanvasGsapBall></CanvasGsapBall>
             </div>
         </div>
     );

@@ -13,6 +13,7 @@ const Header = () => {
                     <li><Link to="/lines">Lines</Link></li>
                     <li><Link to="/scroll">Scroll</Link></li>
                     <li><Link to="/sticker">Sticker</Link></li>
+                    <li><Link to="/note">Note</Link></li>
                 </ul>
             </div>
         </header>
