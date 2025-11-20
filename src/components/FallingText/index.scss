@@ -1,0 +1,16 @@
+// index.scss
+.falling-text-container {
+  position: relative;
+  overflow: hidden; // 画面外に出たら見えなくする
+  height: 100vh;    // 落ちるスペースを確保
+}
+
+.falling-char {
+  display: inline-block; // これがないとtransformが効きません！
+  font-size: 3rem;
+  font-weight: bold;
+  
+  // 重要: アニメーション開始前は普通に並んでいてほしいので
+  // position: absolute; はまだ使いません。
+  // 物理演算が始まった瞬間に、JS側で制御します。
+}
